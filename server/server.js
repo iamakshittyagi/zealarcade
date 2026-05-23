@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
-import leaderboardRoutes from './routes/leaderboard.js'; // 👈 added
+import leaderboardRoutes from './routes/leaderboard.js';
 import adminRoutes from './routes/admin.js';
 
 dotenv.config();
@@ -14,13 +14,30 @@ connectDB();
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+
+// CORS — allow localhost (dev) and CLIENT_URL (production Vercel)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (curl, Postman, mobile apps)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error(`Origin ${origin} not allowed by CORS`));
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api', gameRoutes);
-app.use('/api/leaderboard', leaderboardRoutes); // 👈 added
+app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/admin', adminRoutes);
 
 app.get('/', (req, res) => {
