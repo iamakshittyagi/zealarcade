@@ -128,24 +128,6 @@ const Welcome = () => {
                                 </>
                             )}
                         </div>
-
-                        {/* Stats */}
-                        <div className="wl-stats">
-                            <div className="wl-stat">
-                                <span className="wl-stat-val wl-green">10+</span>
-                                <span className="wl-stat-key">Games</span>
-                            </div>
-                            <div className="wl-stat-sep" />
-                            <div className="wl-stat">
-                                <span className="wl-stat-val wl-purple">100</span>
-                                <span className="wl-stat-key">Starting Coins</span>
-                            </div>
-                            <div className="wl-stat-sep" />
-                            <div className="wl-stat">
-                                <span className="wl-stat-val wl-green">4</span>
-                                <span className="wl-stat-key">Developers</span>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Right — game showcase */}
@@ -451,38 +433,6 @@ const Welcome = () => {
                     transform: translateY(-2px);
                 }
 
-                /* Stats */
-                .wl-stats {
-                    display: flex;
-                    align-items: center;
-                    gap: 1.5rem;
-                }
-                .wl-stat {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.15rem;
-                }
-                .wl-stat-val {
-                    font-family: var(--font-ui);
-                    font-size: 1.6rem;
-                    font-weight: 900;
-                    line-height: 1;
-                }
-                .wl-stat-key {
-                    font-size: 0.75rem;
-                    color: var(--text-secondary);
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.07em;
-                }
-                .wl-green { color: #22c55e; }
-                .wl-purple { color: #8e44ad; }
-                .wl-stat-sep {
-                    width: 1px;
-                    height: 36px;
-                    background: rgba(142,68,173,0.18);
-                }
-
                 /* Right */
                 .wl-hero-right {
                     position: relative;
@@ -626,7 +576,6 @@ const Welcome = () => {
                     .wl-headline { font-size: clamp(2rem, 8vw, 2.8rem); }
                     .wl-cta-row { flex-direction: column; }
                     .wl-btn-primary, .wl-btn-outline { justify-content: center; }
-                    .wl-stats { gap: 1rem; }
                     .wl-hero { padding: 2rem 1.25rem; }
                 }
             `}</style>

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Code2 } from 'lucide-react';
 
 const Footer = () => {
-    const year = new Date().getFullYear();
-
     return (
         <footer className="site-footer">
             <div className="footer-inner">
@@ -39,20 +36,6 @@ const Footer = () => {
                         <Link to="/games/snake">Snake</Link>
                         <Link to="/games/connect-four">Connect Four</Link>
                     </div>
-
-                    {/* Team GitHub */}
-                    <div className="footer-col">
-                        <h4>Our Team</h4>
-                        <a href="https://github.com/iamakshittyagi" target="_blank" rel="noopener noreferrer" className="team-link"><Code2 size={14} />Akshit Tyagi</a>
-                        <a href="https://github.com/SRIKARKRISHNAC" target="_blank" rel="noopener noreferrer" className="team-link"><Code2 size={14} />Srikar Krishna</a>
-                        <a href="https://github.com/A-Jayanth-03" target="_blank" rel="noopener noreferrer" className="team-link"><Code2 size={14} />Allada Jayanth</a>
-                        <a href="https://github.com/Zoo57" target="_blank" rel="noopener noreferrer" className="team-link"><Code2 size={14} />Zuha Fathima</a>
-                    </div>
-                </div>
-
-                <div className="footer-bottom">
-                    <p>© {year} Zeal Arcade. Project Work.</p>
-    
                 </div>
             </div>
 
@@ -96,11 +79,6 @@ const Footer = () => {
                 .footer-col a:hover {
                     color: var(--accent-primary);
                 }
-                .team-link {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                }
                 .footer-brand {
                     display: flex;
                     align-items: center;
@@ -125,22 +103,6 @@ const Footer = () => {
                     line-height: 1.6;
                     max-width: 320px;
                 }
-                .footer-bottom {
-                    border-top: 1px solid var(--card-border);
-                    padding-top: 1.5rem;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 1rem;
-                    color: var(--text-secondary);
-                    font-size: 0.9rem;
-                }
-                .made-with {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.4rem;
-                }
                 @media (max-width: 768px) {
                     .footer-grid {
                         grid-template-columns: 1fr 1fr;
@@ -148,10 +110,6 @@ const Footer = () => {
                     }
                     .footer-inner {
                         padding: 2rem 1.5rem 1rem;
-                    }
-                    .footer-bottom {
-                        flex-direction: column;
-                        text-align: center;
                     }
                 }
                 @media (max-width: 480px) {

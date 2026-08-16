@@ -151,7 +151,7 @@ const Login = () => {
                                 {/* Hint box */}
                                 <div className="li-hint">
                                     <span className="li-hint-icon">💡</span>
-                                    <span>Demo: <strong>testuser</strong> / <strong>test123</strong></span>
+                                    <span>Demo: <strong>Zealtester</strong> / <strong>Zeal123</strong></span>
                                 </div>
 
                                 <button
