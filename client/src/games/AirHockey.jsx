@@ -266,7 +266,7 @@ a.y = Math.max(a.radius, Math.min(380, a.y));
             ctx.fillStyle = 'rgba(255,255,255,0.8)';
             ctx.fillRect(0, 0, 500, 800);
             ctx.fillStyle = '#8e44ad';
-            ctx.font = 'bold 24px Outfit';
+            ctx.font = 'bold 24px Aldrich';
             ctx.textAlign = 'center';
             ctx.fillText('Searching for Pro Player...', 250, 400);
         }

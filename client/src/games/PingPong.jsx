@@ -229,7 +229,7 @@ a.y = Math.max(0, Math.min(400 - paddleHeight, a.y));
             ctx.fillStyle = 'rgba(0,0,0,0.6)';
             ctx.fillRect(0, 0, 600, 400);
             ctx.fillStyle = '#fff';
-            ctx.font = '20px Outfit';
+            ctx.font = '20px Aldrich';
             ctx.textAlign = 'center';
             ctx.fillText('Finding Opponent...', 300, 200);
         }

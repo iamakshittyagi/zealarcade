@@ -15,9 +15,9 @@
   --accent-info: #3b82f6;
 
   /* Fonts */
-  --font-body: 'Outfit', sans-serif;
-  --font-ui: 'Orbitron', sans-serif;
-  --font-arcade: 'Press Start 2P', cursive;
+  --font-body: 'Aldrich', sans-serif;
+  --font-ui: 'Aldrich', sans-serif;
+  --font-arcade: 'Aldrich', sans-serif;
 
   /* Radii */
   --radius-sm: 8px;
